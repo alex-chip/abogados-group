@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Alex | #{title}
+    meta(name="description" content="#{descripcion}")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+  body
+    header#header
+      .main-header
+        include blocks/header
+      .main-banner
+        block banner
+    link(rel="stylesheet" href="css/styles.css")
+    section#main
+      .ed-container
+        .ed-item.main
+          block main
+
+
+    section#servicios
+      .ed-container
+        block servicios
+
+    section#financiamiento
+      .ed-container.financiamiento
+        include blocks/financiamiento
+
+    section#noticias
+      .ed-container
+        include blocks/noticias
+
+    footer#footer
+      .ed-container
+        include blocks/footer
+
+    section#derechos
+    .ed-container.full.derechos.main-center
+      p All rights reserved &copy
+
+script(src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+script(src="js/scripts.js")
+
+
+
+
+
+
+
+
+
